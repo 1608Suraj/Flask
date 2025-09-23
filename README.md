@@ -1,87 +1,116 @@
 # Flask Repo
 
-This repository contains simple Flask examples demonstrating basic
-routing, string manipulation, and a number‑checking endpoint.
+This repository contains simple Flask examples demonstrating **basic routing, string manipulation, number checking**, and **HTML template rendering for eligibility checking**.
 
-------------------------------------------------------------------------
+---
 
 ## 📁 Repository Structure
 
-    Flask/
-    ├── first.py        # Flask app with several routes
-    ├── Interview.md    # Q&A document for Flask/Python interview prep
-    └── README.md       # This file
+```
+Flask/
+├── first.py                # Day 1 Flask app (basic routes)
+├── Interview.md           # Q&A document for Flask/Python interview prep
+├── day2_agecheck.py       # Day 2 Flask app (eligibility check with templates)
+├── templates/
+│   ├── eligible.html       # Template for eligible users
+│   └── noteligible.html    # Template for not eligible users
+└── README.md              # This file
+```
 
-------------------------------------------------------------------------
+---
 
-## 🚀 Getting Started
+# 🔖 Day 1 — Basic Flask Routes
 
-These steps will help you run the Flask app locally.
+### 🚀 Features Implemented
 
-### Prerequisites
+* Root route (`/`) → returns **Hello, World!**
+* Reverse string route (`/reverse/<string:text>`) → returns original and reversed string
+* Armstrong number checker (`/check/<int:num>`) → checks if a number is an Armstrong number
 
--   Python 3.x installed\
--   `pip` for installing dependencies
+### ▶️ Run Instructions
 
-### Installation & Running
+```bash
+# Navigate into repo
+cd Flask  
 
-1.  Clone the repo:
+# Install dependencies
+pip install flask  
 
-    ``` bash
-    git clone https://github.com/1608Suraj/Flask.git
-    cd Flask
-    ```
+# Run Day 1 app
+python day1_first.py
+```
 
-2.  Install Flask:
+App runs on: **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
 
-    ``` bash
-    pip install flask
-    ```
+### 🌐 Routes Summary
 
-3.  Run the app:
+| Route                    | Method | Purpose                                                                 |
+| ------------------------ | ------ | ----------------------------------------------------------------------- |
+| `/`                      | GET    | Returns `"Hello, World!"`                                               |
+| `/reverse/<string:text>` | GET    | Returns original + reversed string (`/reverse/hello` → `olleh`)         |
+| `/check/<int:num>`       | GET    | Checks if number is Armstrong (`/check/153` → Armstrong number message) |
 
-    ``` bash
-    python first.py
-    ```
+---
 
-    The app runs in **debug mode** and listens by default on
-    `http://127.0.0.1:5000`
+# 🔖 Day 2 — Eligibility Check with Templates
 
-------------------------------------------------------------------------
+### 📚 Learning (Step-up from Day 1)
 
-## 🧰 Functionality / Routes
+* Learned how to use **Flask’s render\_template()** to connect Python with HTML
+* Introduced **Jinja2 templating** to dynamically display variables (`{{ age }}`) in HTML
+* Applied **separation of logic and presentation** (Python logic in `.py`, UI in `.html`)
+* Understood **conditional rendering** (eligible vs not eligible)
 
-Here are the example endpoints provided:
+---
 
-  ----------------------------------------------------------------------------------------
-  Route                      Method                  Purpose
-  -------------------------- ----------------------- -------------------------------------
-  `/`                        GET                     Returns "Hello, World!"
+<div align="center">
+  <img src="https://via.placeholder.com/400x200.png?text=Eligible+Page" alt="Eligible Page" />
+  <img src="https://via.placeholder.com/400x200.png?text=Not+Eligible+Page" alt="Not Eligible Page" />
+</div>
 
-  `/reverse/<string:text>`   GET                     Returns the original text plus its
-                                                     reverse. Example: `/reverse/hello` →
-                                                     `Original: hello | Reversed: olleh`
+---
 
-  `/check/<int:num>`         GET                     Checks if `num` is an Armstrong
-                                                     number. Example: `/check/153` → "153
-                                                     is an Armstrong number!"
-  ----------------------------------------------------------------------------------------
+### 🚀 Features Implemented
 
-------------------------------------------------------------------------
+* Root route (`/`) → simple welcome message
+* Age route (`/age/<int:age>`) → checks if a person is **eligible** or **not eligible**
+* Uses **Jinja2 templates** (`eligible.html` and `noteligible.html`) for styled output
 
-## 🔧 Notes
+### ▶️ Run Instructions
 
--   The code is using `debug=True` in `app.run()` so any changes to the
-    code will auto‑reload the server, and detailed errors are shown in
-    browser.\
--   Path parameters (like `<string:text>` and `<int:num>`) are used to
-    pass data via the URL path.
+```bash
+# Navigate into repo
+cd Flask  
 
-------------------------------------------------------------------------
+# Run Day 2 app
+python day2_agecheck.py
+```
+
+App runs on: **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
+
+### 🌐 Routes Summary
+
+| Route            | Method | Purpose                                                               |
+| ---------------- | ------ | --------------------------------------------------------------------- |
+| `/`              | GET    | Returns a welcome message with instructions                           |
+| `/age/<int:age>` | GET    | Renders an HTML page showing whether the person is **Eligible / Not** |
+
+---
+
+## 🧰 Notes
+
+* Both apps run in **debug mode** (`debug=True`) for auto-reload and detailed error messages.
+* **Day 1** demonstrates *basic routing & string/number logic*.
+* **Day 2** introduces *Flask template rendering (HTML with Jinja2 variables)*.
+
+---
 
 ## ✅ Contributing
 
-Feel free to suggest enhancements, add new routes / examples, or fix
-issues. Fork & pull requests are welcome.
+Feel free to:
 
-------------------------------------------------------------------------
+* Add new routes / examples
+* Improve templates & UI
+* Suggest enhancements via fork & pull request
+
+---
