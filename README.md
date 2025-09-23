@@ -93,7 +93,7 @@ App runs on: **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
 | Route            | Method | Purpose                                                               |
 | ---------------- | ------ | --------------------------------------------------------------------- |
 | `/`              | GET    | Returns a welcome message with instructions                           |
-| `/age/<int:age>` | GET    | Renders an HTML page showing whether the person is **Eligible / Not** |
+| `/age/<int:age>` | GET    | Renders an HTML page showing whether the person is **Eligible / NotEligible** |
 
 ---
 
