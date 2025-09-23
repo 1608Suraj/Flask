@@ -85,7 +85,3 @@ Feel free to suggest enhancements, add new routes / examples, or fix
 issues. Fork & pull requests are welcome.
 
 ------------------------------------------------------------------------
-
-## 📄 License
-
-This project is open source. Use it freely.
