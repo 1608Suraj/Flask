@@ -64,8 +64,8 @@ App runs on: **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
 ---
 
 <div align="center">
-  <img src="https://via.placeholder.com/400x200.png?text=Eligible+Page" alt="Eligible Page" />
-  <img src="https://via.placeholder.com/400x200.png?text=Not+Eligible+Page" alt="Not Eligible Page" />
+  <img src="https://github.com/1608Suraj/Flask/blob/main/Day02/eligible.png" alt="Eligible Page"/>
+  <img src="https://github.com/1608Suraj/Flask/blob/main/Day02/not_eligible.png" alt="Not Eligible Page" />
 </div>
 
 ---
