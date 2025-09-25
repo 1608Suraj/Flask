@@ -10,7 +10,7 @@ This repository contains simple Flask examples demonstrating **basic routing, st
 Flask/
 ├── first.py                # Day 1 Flask app (basic routes)
 ├── Interview.md           # Q&A document for Flask/Python interview prep
-├── day2_agecheck.py       # Day 2 Flask app (eligibility check with templates)
+├── app.py       # Day 2 Flask app (eligibility check with templates)
 ├── templates/
 │   ├── eligible.html       # Template for eligible users
 │   └── noteligible.html    # Template for not eligible users
@@ -37,7 +37,7 @@ cd Flask
 pip install flask  
 
 # Run Day 1 app
-python day1_first.py
+python first.py
 ```
 
 App runs on: **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
@@ -83,7 +83,7 @@ App runs on: **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
 cd Flask  
 
 # Run Day 2 app
-python day2_agecheck.py
+python app.py
 ```
 
 App runs on: **[http://127.0.0.1:5000](http://127.0.0.1:5000)**
